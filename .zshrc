@@ -2,23 +2,8 @@ if xrandr | grep "HDMI-A-0 disconnected"; then
 command xrandr --output eDP --primary --mode 1440x900 --pos 0x0 --rotate normal --output HDMI-A-0 --off --output DisplayPort-0 --off --output DisplayPort-1 --off
 else 
   command xrandr --output HDMI-A-0 --mode 1920x1080 --pos 2250x90 --rotate normal --output eDP --primary --mode 1440x900 --pos 0x0 --rotate normal --output DisplayPort-0 --off --output DisplayPort-1 --off
-
-  if ! pgrep -u $USER i3-sensible-terminal >/dev/null 2>&1; then
-  else
-    command workspace-switcher.sh
-    command clear
-  fi
-
   command clear
 fi
-
-#if xrandr | grep "HDMI-A-0 connected"; then
-#    # HDMI is connected: Enable both eDP and HDMI, set HDMI as primary
-#    xrandr --output eDP --auto --primary --output HDMI-A-0 --auto --right-of eDP
-#else
-#    # HDMI is disconnected: Use only eDP
-#    xrandr --output eDP --auto --primary --output HDMI-A-0 --off
-#fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -131,3 +116,6 @@ export PATH="$PATH:/opt/nvim-linux64/bin:/usr/lib:$HOME/.local/bin:/usr/bin:$HOM
 alias sd="cd /home && cd \$(find * -type d | fzf) && clear"
 export MANPAGER='nvim +Man!'
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+command xdotool key super+shift+1
+command xdotool key super+1
+command xdotool key ctrl+"+"
