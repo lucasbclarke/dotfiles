@@ -42,6 +42,11 @@
 # resize-overlay-duration = 4s 200ms
 gtk-titlebar = false
 window-decoration = false
-quit-after-last-window-closed = false
+font-family = "JetBrainsMono NF Medium"
 
 keybind = ctrl+x=copy_to_clipboard
+keybind = ctrl+shift+v=unbind
+keybind = ctrl+v=paste_from_clipboard
+keybind = ctrl+a=select_all
+
+confirm-close-surface = false
