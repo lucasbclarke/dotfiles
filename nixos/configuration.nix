@@ -1,9 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes 
-  '';
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
 
@@ -98,18 +96,30 @@
   programs = {
     firefox.enable = true;
     zsh.enable = true;
-    vim.enable = true;
     git.enable = true;
     tmux.enable = true;
+
+    neovim = {
+      enable = true;
+
+      defaultEditor = true;
+
+      plugins = with pkgs.vimPlugins; [
+	nvim-lspconfig
+	lsp-zero-nvim
+	
+      ];
+    }
   };
   
 
   nixpkgs.config.allowUnfree = true;
 
+
   environment.systemPackages = with pkgs; [
-     ghostty gh sqlite tldr fzf
-     (import ./git-repos.nix {inherit pkgs;})
-     (import ./sud.nix {inherit pkgs;})
+    ghostty gh sqlite tldr fzf
+      (import ./git-repos.nix {inherit pkgs;})
+      (import ./sud.nix {inherit pkgs;})
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
