@@ -1,3 +1,4 @@
+# this shouldn't be needed anymore because of sway configuration
 if xrandr | grep "HDMI-A-0 disconnected"; then
 command xrandr --output eDP --primary --mode 1440x900 --pos 0x0 --rotate normal --output HDMI-A-0 --off --output DisplayPort-0 --off --output DisplayPort-1 --off
 else 
@@ -111,6 +112,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
+fi
+
+if [[ -v TMUX ]]; then
+    # inside tmux, we don't know if Sway got restarted
+    swaymsg(){
+        export SWAYSOCK=$XDG_RUNTIME_DIR/sway-ipc.$UID.$(pgrep -x sway).sock
+        command swaymsg "$@"
+    }
 fi
 
 alias nix-shell='nix-shell --run $SHELL'

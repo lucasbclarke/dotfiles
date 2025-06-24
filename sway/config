@@ -104,7 +104,8 @@ titlebar_padding 5 1
 bar {
     position bottom
 
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command i3status
 
     colors {
         statusline #ffffff
@@ -114,4 +115,15 @@ bar {
 }
 
 
+output Virtual-1 {
+    mode 1440x900
+}
+
+output HDMI-A-0 {
+    mode 1920x1080
+}
+
+output eDP {
+    mode 1440x900
+}
 include /etc/sway/config.d/*
