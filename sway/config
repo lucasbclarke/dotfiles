@@ -19,6 +19,9 @@ bindsym $mod+d exec $menu
 
 bindsym $mod+Shift+c reload
 
+bindsym $mod+b exec brave
+
+bindsym $mod+Shift+d exec Discord
 
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
@@ -57,7 +60,7 @@ bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
 
-bindsym $mod+b splith
+bindsym $mod+g splith
 bindsym $mod+v splitv
 
 
@@ -98,7 +101,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 
 bar {
-    position top
+    position bottom
 
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 

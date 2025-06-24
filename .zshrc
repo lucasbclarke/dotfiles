@@ -112,6 +112,17 @@ source $ZSH/oh-my-zsh.sh
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
+
+alias nix-shell='nix-shell --run $SHELL'
+nix() {
+  if [[ $1 == "develop" ]]; then
+    shift
+    command nix develop -c $SHELL "$@"
+  else
+    command nix "$@"
+  fi
+}
+
 export PATH="$PATH:/opt/nvim-linux64/bin:/usr/lib:$HOME/.local/bin:/usr/bin:$HOME/zig-linux-x86_64-0.14.0-dev.2182+54d0ba418"
 alias sd="cd /home && cd \$(find * -type d | fzf) && clear"
 export MANPAGER='nvim +Man!'
