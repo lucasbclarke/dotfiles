@@ -110,7 +110,7 @@ output HDMI-A-0 {
     mode 1920x1080
 }
 
-output eDP {
+output eDP-1 {
     mode 1440x900
 }
 
