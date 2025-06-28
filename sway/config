@@ -1,5 +1,8 @@
 set $mod Mod4
 
+exec_always ~/.config/sway/setup-displays.sh &
+#bindsym $mod+Shift+m exec ~/.config/sway/setup-displays.sh
+
 set $term ghostty
 
 set $left h
@@ -104,7 +107,7 @@ output Virtual-1 {
     mode 1440x900
 }
 
-output HDMI-A-0 {
+output HDMI-A-1 {
     mode 1920x1080
 }
 
