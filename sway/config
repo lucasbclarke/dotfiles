@@ -1,7 +1,6 @@
 set $mod Mod4
 
 exec_always ~/.config/sway/setup-displays.sh &
-#bindsym $mod+Shift+m exec ~/.config/sway/setup-displays.sh
 
 set $term ghostty
 
@@ -21,6 +20,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+b exec brave
 bindsym $mod+Shift+d exec Discord
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+p exec powersupply
 
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
