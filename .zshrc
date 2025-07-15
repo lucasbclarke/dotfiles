@@ -132,7 +132,7 @@ nix() {
   fi
 }
 
-export PATH="$PATH:/opt/nvim-linux64/bin:/usr/lib:$HOME/.local/bin:/usr/bin:$HOME/zig-linux-x86_64-0.14.0-dev.2182+54d0ba418"
+export PATH="$PATH:/opt/nvim-linux64/bin:/usr/lib:$HOME/.local/bin:/usr/bin:$HOME/zig-latest-linux-x86_64"
 alias sd="cd /home && cd \$(find * -type d | fzf) && clear"
 export MANPAGER='nvim +Man!'
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
