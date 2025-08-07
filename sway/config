@@ -25,6 +25,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 bindsym $mod+p exec powersupply
 bindsym $mod+Shift+p exec poweroff
 bindsym $mod+Shift+r exec reboot
+bindsym $mod+Shift+s exec grim -g "$(slurp)"
 
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
