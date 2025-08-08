@@ -120,6 +120,21 @@ output eDP-1 {
     mode 1440x900
 }
 
+input type:touchpad {
+	events enabled
+	pointer_accel 0
+	accel_profile adaptive
+	natural_scroll disabled
+	left_handed disabled
+	scroll_factor 1
+	middle_emulation disabled
+	scroll_method two_finger
+	dwt enabled
+	tap enabled
+	tap_button_map lrm
+	click_method button_areas
+}
+
 set $base           #191724
 set $surface        #1f1d2e
 set $overlay        #26233a
