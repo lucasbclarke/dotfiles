@@ -136,6 +136,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin:/usr/lib:$HOME/.local/bin:/usr/bin:$HOM
 alias sd="cd /home && cd \$(find * -type d | fzf) && clear"
 export MANPAGER='nvim +Man!'
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export NIXPKGS_ALLOW_UNFREE=1
 command xdotool key super+shift+1
 command xdotool key super+1
 command xdotool key ctrl+"+"
