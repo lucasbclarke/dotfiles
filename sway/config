@@ -26,6 +26,8 @@ bindsym $mod+p exec powersupply
 bindsym $mod+Shift+p exec poweroff
 bindsym $mod+Shift+r exec reboot
 bindsym $mod+Shift+s exec grim -g "$(slurp)"
+bindsym $mod+Shift+w exec win &
+bindsym $mod+Shift+x exec pkill win
 
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
