@@ -9,7 +9,7 @@ set $down j
 set $up k
 set $right l
 
-set $menu wmenu-run
+set $menu wofi --show drun
 
 exec ghostty
 
@@ -95,11 +95,15 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 titlebar_padding 5 1
 
+font pango:JetBrainsMono Medium 11
+
 bar {
     position bottom
 
     #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
     status_command i3status
+
+    font pango:JetBrainsMono Medium 11
 
     colors {
         statusline #ffffff
