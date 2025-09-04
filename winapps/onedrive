@@ -1,0 +1,3 @@
+#!/run/current-system/sw/bin/zsh
+
+xfreerdp /u:lucas /p:lucas /v:127.0.0.1 /cert:tofu /app:program:'C:\Program Files\Microsoft OneDrive\OneDrive.exe'
