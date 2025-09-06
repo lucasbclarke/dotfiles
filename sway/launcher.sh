@@ -9,6 +9,7 @@ outlook
 explorer
 notepad
 onedrive
+visual-studio
 thunar
 blueman
 virt-manager
@@ -26,68 +27,31 @@ selection=$(echo "$apps" | wofi --show dmenu --prompt "Launch:")
 # Execute based on selection
 case "$selection" in
     "excel")
-        if [[ -n $( pgrep -x "win" ) ]]; then
-            exec /usr/bin/excel
-        else
-            exec win & 
-            exec /usr/bin/excel
-        fi
+        exec /usr/bin/excel
         ;;
     "word")
-        if [[ -n $( pgrep -x "win" ) ]]; then
-            exec /usr/bin/word
-        else
-            exec win & 
-            exec /usr/bin/word
-        fi
+        exec /usr/bin/word
         ;;
     "powerpoint")
-        if [[ -n $( pgrep -x "win" ) ]]; then
-            exec /usr/bin/powerpoint
-        else
-            exec win & 
-            exec /usr/bin/powerpoint
-        fi
+        exec /usr/bin/powerpoint
         ;;
     "windows")
-        if [[ -n $( pgrep -x "win" ) ]]; then
-            exec /usr/bin/windows
-        else
-            exec win & 
-            exec /usr/bin/windows
-        fi
+        exec /usr/bin/windows
         ;;
     "outlook")
-        if [[ -n $( pgrep -x "win" ) ]]; then
-            exec /usr/bin/outlook
-        else
-            exec win & 
-            exec /usr/bin/outlook
-        fi
+        exec /usr/bin/outlook
         ;;
     "explorer")
-        if [[ -n $( pgrep -x "win" ) ]]; then
-            exec /usr/bin/explorer
-        else
-            exec win & 
-            exec /usr/bin/explorer
-        fi
+        exec /usr/bin/explorer
         ;;
     "notepad")
-        if [[ -n $( pgrep -x "win" ) ]]; then
-            exec /usr/bin/notepad
-        else
-            exec win & 
-            exec /usr/bin/notepad
-        fi
+        exec /usr/bin/notepad
         ;;
     "onedrive")
-        if [[ -n $( pgrep -x "win" ) ]]; then
-            exec /usr/bin/onedrive
-        else
-            exec win & 
-            exec /usr/bin/onedrive
-        fi
+        exec /usr/bin/onedrive
+        ;;
+    "visual-studio")
+        exec /usr/bin/visual-studio
         ;;
     "thunar")
         exec thunar
