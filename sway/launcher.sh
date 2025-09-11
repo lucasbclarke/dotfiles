@@ -10,9 +10,10 @@ explorer
 notepad
 onedrive
 visual-studio
+vivi
 thunar
 blueman
-virt-manager
+virtualbox
 pavucontrol
 printer-settings
 nm-connection-editor
@@ -53,14 +54,17 @@ case "$selection" in
     "visual-studio")
         exec /usr/bin/visual-studio
         ;;
+    "vivi")
+        exec /usr/bin/vivi
+        ;;
     "thunar")
         exec thunar
         ;;
     "blueman")
         exec blueman-manager
         ;;
-    "virt-manager")
-        exec virt-manager
+    "virtualbox")
+        exec VirtualBox
         ;;
     "pavucontrol")
         exec pavucontrol
